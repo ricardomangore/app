@@ -1,0 +1,271 @@
+<div class="page-content row">
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="page-title">
+        <h3> <?php echo $pageTitle; ?> <small><?php echo $pageNote; ?></small></h3>
+      </div>
+      <ul class="breadcrumb">
+        <li><a href="<?php echo URL::to('dashboard'); ?>"><?php echo Lang::get('core.home'); ?></a></li>
+		<li><a href="<?php echo URL::to('piers?md='.$masterdetail["filtermd"]); ?>"><?php echo $pageTitle; ?></a></li>
+        <li class="active"> <?php echo Lang::get('core.detail'); ?> </li>
+      </ul>
+	 </div>  
+	 
+	 
+ 	<div class="page-content-wrapper">   
+	   <div class="toolbar-line">
+	   		<a href="<?php echo URL::to('piers?md='.$masterdetail["filtermd"].$trackUri); ?>" class="tips btn btn-xs btn-default" title="<?php echo Lang::get('core.btn_back'); ?>"><i class="icon-table"></i>&nbsp;<?php echo Lang::get('core.btn_back'); ?></a>
+			<?php if($access['is_add'] ==1): ?>
+	   		<a href="<?php echo URL::to('piers/add/'.$id.'?md='.$masterdetail["filtermd"].$trackUri); ?>" class="tips btn btn-xs btn-primary" title="<?php echo Lang::get('core.btn_edit'); ?>"><i class="icon-pencil3"></i>&nbsp;<?php echo Lang::get('core.btn_edit'); ?></a>
+			<?php endif; ?>  		   	  
+		</div>
+	<div class="table-responsive">
+	<table class="table table-striped table-bordered" >
+		<tbody>	
+	
+					<tr>
+						<td width='30%' class='label-view text-right'>ID</td>
+						<td><?php echo $row->ID; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>IMPORT EXPORT</td>
+						<td><?php echo $row->IMPORT_EXPORT; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>HSCODE 6DIGITS</td>
+						<td><?php echo $row->HSCODE_6DIGITS; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>DESCRIPTION 6DIGITS</td>
+						<td><?php echo $row->DESCRIPTION_6DIGITS; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>HSCODE 8DIFITS</td>
+						<td><?php echo $row->HSCODE_8DIFITS; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>DESCRIPTION 8DIGITS</td>
+						<td><?php echo $row->DESCRIPTION_8DIGITS; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>IRS MX</td>
+						<td><?php echo $row->IRS_MX; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>NAME MX</td>
+						<td><?php echo $row->NAME_MX; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>ADDRESS MX</td>
+						<td><?php echo $row->ADDRESS_MX; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>ZIP MX</td>
+						<td><?php echo $row->ZIP_MX; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>CITY MX</td>
+						<td><?php echo $row->CITY_MX; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>STATE MX</td>
+						<td><?php echo $row->STATE_MX; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>CUSTOM KEY</td>
+						<td><?php echo $row->CUSTOM_KEY; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>SECTION KEY</td>
+						<td><?php echo $row->SECTION_KEY; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>CUSTOM</td>
+						<td><?php echo $row->CUSTOM; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>CUSTOM PORT SATE</td>
+						<td><?php echo $row->CUSTOM_PORT_SATE; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>CUSTOM BROKER</td>
+						<td><?php echo $row->CUSTOM_BROKER; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>DOCUMENT</td>
+						<td><?php echo $row->DOCUMENT; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>DAY</td>
+						<td><?php echo $row->DAY; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>MONTH</td>
+						<td><?php echo $row->MONTH; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>YEAR</td>
+						<td><?php echo $row->YEAR; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>TRANSPORT</td>
+						<td><?php echo $row->TRANSPORT; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>ORIGIN DESTINY</td>
+						<td><?php echo $row->ORIGIN_DESTINY; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>BUYER SELLER</td>
+						<td><?php echo $row->BUYER_SELLER; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>EXCHANGE RATE</td>
+						<td><?php echo $row->EXCHANGE_RATE; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>WEIGHT</td>
+						<td><?php echo $row->WEIGHT; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>QUANTITY</td>
+						<td><?php echo $row->QUANTITY; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>UNIT</td>
+						<td><?php echo $row->UNIT; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>PESOS</td>
+						<td><?php echo $row->PESOS; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>USD</td>
+						<td><?php echo $row->USD; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>COMER QTY</td>
+						<td><?php echo $row->COMER_QTY; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>COMER UNIT</td>
+						<td><?php echo $row->COMER_UNIT; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>COMER VALUE</td>
+						<td><?php echo $row->COMER_VALUE; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>IRS</td>
+						<td><?php echo $row->IRS; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>NAME</td>
+						<td><?php echo $row->NAME; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>ADDRESS</td>
+						<td><?php echo $row->ADDRESS; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>INTERIOR</td>
+						<td><?php echo $row->INTERIOR; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>EXTERIOR</td>
+						<td><?php echo $row->EXTERIOR; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>ZIP</td>
+						<td><?php echo $row->ZIP; ?> </td>
+						
+					</tr>
+				
+					<tr>
+						<td width='30%' class='label-view text-right'>CITY STATE</td>
+						<td><?php echo $row->CITY_STATE; ?> </td>
+						
+					</tr>
+				
+		</tbody>	
+	</table>    
+	</div>
+	</div>
+</div>
+	  
